@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000'
+const apiUrl = 'https://secret-uxgu.onrender.com'
 const errorBox = document.querySelector('.error')
 const errorTxt = document.querySelector('.error h3')
 const errorBtn = document.querySelector('.error a')
@@ -22,7 +22,7 @@ if(r){
         const data = await res.json()
         console.log(data)
         if (res.ok) {
-            window.location.href = 'http://localhost:3000/login'
+            window.location.href = 'https://secret-uxgu.onrender.com/login'
         } else {
             overlay.style.display = 'block'
             errorBox.style.scale = '1'
@@ -52,7 +52,7 @@ if(loginForm){
         const data = await res.json()
         console.log(data)
         if (res.ok) {
-            window.location.href = 'http://localhost:3000'
+            window.location.href = 'https://secret-uxgu.onrender.com'
         } else {
             overlay.style.display = 'block'
             errorBox.style.scale = '1'
