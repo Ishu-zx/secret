@@ -4,7 +4,7 @@ dotenv.config()
 const auth = (req, res, next) => {
     const token = req.cookies.token
     if(!token){
-       res.redirect('/login');
+       return res.redirect('/login');    
     } 
     try {
         const user = jwt.verify(token, process.env.JWT_SECRET)
