@@ -1,4 +1,4 @@
-const apiUrl = 'https://secret-uxgu.onrender.com'
+const apiUrl = 'https://secret-uxgu.onrender.com' /* 'http://localhost:3000' */
 const errorBox = document.querySelector('.error')
 const errorTxt = document.querySelector('.error h3')
 const errorBtn = document.querySelector('.error a')
@@ -17,12 +17,12 @@ if(r){
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({name, email, password })
-        })
+        })  
     
         const data = await res.json()
         console.log(data)
         if (res.ok) {
-            window.location.href = 'https://secret-uxgu.onrender.com/login'
+            window.location.href = `${apiUrl}/login`
         } else {
             overlay.style.display = 'block'
             errorBox.style.scale = '1'
@@ -52,7 +52,7 @@ if(loginForm){
         const data = await res.json()
         console.log(data)
         if (res.ok) {
-            window.location.href = 'https://secret-uxgu.onrender.com'
+            window.location.href = `${apiUrl}`
         } else {
             overlay.style.display = 'block'
             errorBox.style.scale = '1'

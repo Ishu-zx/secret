@@ -82,8 +82,8 @@ ul{
     padding-bottom: 10px !important;
 }
 ul li{
+    display: flex;
     font-size: 1.4rem;
-    text-align: left;
     margin-top: 10px;
 }
 ul li span{
@@ -94,6 +94,22 @@ ul li span{
     padding: 3px 7px;
     border-radius: 10px;
 }
+/* options styling */
+.options{
+    display: none;
+    order:-1;
+    flex-direction: column;
+    margin: 0 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+.options a{
+    display: none;
+}
+.fa-ellipsis{
+    left: 0;
+}
+
 .loginUser{
     color: #fff;
     background-color: #198754;
